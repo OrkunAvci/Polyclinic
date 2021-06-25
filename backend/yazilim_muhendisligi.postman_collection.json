@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "b97282f3-7ae0-4ffa-9cd3-86a6070ca62a",
+		"name": "yazilim_muhendisligi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/logout",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"ali\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/patients/13131313131",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"patients",
+						"13131313131"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tc\": 13131313131,\n    \"name\":\"hasan ali\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/patients/create",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"patients",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tc\": 13131313131,\n    \"notes\": \"lialu123i2j1l123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/patients/update",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"patients",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tc\":\"13131313131\",\n    \"start_date\": \"1621352880\",\n    \"end_date\": \"1621363581\",\n    \"notes\": \"verem\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/patients/add_appointment",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"patients",
+						"add_appointment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+}
